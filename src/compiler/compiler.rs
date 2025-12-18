@@ -2314,7 +2314,7 @@ LLVM version: 6.0",
                 ..Default::default()
             },
             CacheMode::ReadWrite,
-            None,
+            vec![],
         );
         // Write a dummy input file so the preprocessor cache mode can work
         std::fs::write(f.tempdir.path().join("foo.c"), "whatever").unwrap();
@@ -2445,7 +2445,7 @@ LLVM version: 6.0",
                 ..Default::default()
             },
             CacheMode::ReadWrite,
-            None,
+            vec![],
         );
         // Write a dummy input file so the preprocessor cache mode can work
         std::fs::write(f.tempdir.path().join("foo.c"), "whatever").unwrap();
@@ -2749,7 +2749,7 @@ LLVM version: 6.0",
                 ..Default::default()
             },
             CacheMode::ReadWrite,
-            None,
+            vec![],
         );
         let storage = Arc::new(storage);
         let service = server::SccacheService::mock_with_storage(storage.clone(), pool.clone());
@@ -2879,7 +2879,7 @@ LLVM version: 6.0",
                 ..Default::default()
             },
             CacheMode::ReadWrite,
-            None,
+            vec![],
         );
         let storage = Arc::new(storage);
         let service = server::SccacheService::mock_with_storage(storage.clone(), pool.clone());
@@ -2978,7 +2978,7 @@ LLVM version: 6.0",
                 ..Default::default()
             },
             CacheMode::ReadWrite,
-            None,
+            vec![],
         );
         let storage = Arc::new(storage);
         // Pretend to be GCC.
